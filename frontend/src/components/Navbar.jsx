@@ -21,14 +21,14 @@ const handleLogout = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="hover:underline">
-            Home
-          </a>
           <a href="/dashboard" className="hover:underline">
             Dashboard
           </a>
           <a href="/question-data" className="hover:underline">
             Previous questions
+          </a>
+          <a href="/attendance-data" className="hover:underline">
+            Attendance sheet
           </a>
           <button
             onClick={handleLogout}
