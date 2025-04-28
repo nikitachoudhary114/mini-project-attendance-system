@@ -8,6 +8,9 @@ const Footer = () => {
           © {new Date().getFullYear()} Attendance Monitoring System. All rights
           reserved.
         </p>
+        <p className="text-sm mt-2">
+          Made by <span className="font-bold">Nikita, Shivani, Ayush</span>
+        </p>
         <div className="mt-2 flex justify-center space-x-4">
           <a
             href="#"

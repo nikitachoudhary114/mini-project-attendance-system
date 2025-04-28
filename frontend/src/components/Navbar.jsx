@@ -1,6 +1,14 @@
 import React from "react";
 
 const Navbar = () => {
+const handleLogout = () => {
+  // Remove the token from localStorage
+  localStorage.removeItem("token");
+
+  // Redirect to the login page
+  window.location.href = "/";
+};
+  
   return (
     <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -19,12 +27,15 @@ const Navbar = () => {
           <a href="/dashboard" className="hover:underline">
             Dashboard
           </a>
-          <a href="/attendance" className="hover:underline">
-            Attendance
+          <a href="/question-data" className="hover:underline">
+            Previous questions
           </a>
-          <a href="/login" className="hover:underline">
-            Faculty Login
-          </a>
+          <button
+            onClick={handleLogout}
+            className="hover:underline focus:outline-none"
+          >
+            Logout
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
