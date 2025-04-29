@@ -58,72 +58,41 @@ An intelligent attendance system that integrates **ESP32-based IoT hardware**, a
         v
 [Attendance Marked in MongoDB]
 ```
-🔁 Flow Overview
+## 🔁 Flow Overview
 Faculty Workflow:
-
 Logs in via MERN web dashboard (JWT protected)
-
 Inputs lecture topic, subject, and date
-
 System generates MCQs using the Together.ai RAG API
-
 Question and correct option are stored in MongoDB
 
-Student Workflow:
-
+## Student Workflow:
 Student enters roll number on keypad connected to ESP32
-
 Question fetched from MongoDB for the current session
-
 MCQ displayed on LCD screen
-
 Student answers via keypad
-
 If the answer is correct, attendance is marked in the database
 
-🧠 RAG Model Usage (via Together.ai)
+## 🧠 RAG Model Usage (via Together.ai)
 RAG = Retrieval-Augmented Generation
-
-Input: Lecture topic description
-
+Input: Lecture topic description difficulty and number of questions
 Output: 1 MCQ with 4 options and the correct answer
-
 Powered by Together.ai API for scalable AI inference
-
 Stored in MongoDB for reuse per session/date
 
-🖥️ Faculty Dashboard Features
+## 🖥️ Faculty Dashboard Features
 🔐 Login (JWT authentication)
-
 ➕ Add lecture details (topic, date, subject)
-
 🧠 Trigger MCQ generation from the lecture topic
-
 🔎 View:
-
 Attendance by date
-
 Generated MCQs by date
-
 Student attendance history
 
-📸 Screenshots / Demo
-Include screenshots or Loom/YouTube demo links here
-
-🚀 Future Improvements
-🔍 Search/filter students and lecture records
-
-📱 Mobile-friendly dashboard
-
-📂 Export attendance reports (CSV/PDF)
-
-🧑‍🎓 Student dashboard to check personal attendance
-
+## 🚀 Future Improvements
 🤳 Face recognition for attendance verification
-
 📡 Offline caching for poor network zones
 
-👩‍💻 Made By
+## 👩‍💻 Made By
 Nikita Choudhary
 Electronics and Telecommunication Engineering
 Smart Project using MERN + IoT + AI
